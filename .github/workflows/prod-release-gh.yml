@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     if: github.repository == 'onelandworld/oneland-wiki'
     runs-on: ubuntu-latest
     steps:
@@ -23,9 +23,9 @@ jobs:
         with:
           cmd: build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Deploy Gh-Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: build
-          target-folder: docs
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          cname: wiki.oneland.world
