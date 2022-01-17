@@ -39,6 +39,26 @@ module.exports = {
           type: 'doc',
           id: 'api/collections',
           label: 'Retrieving Collections'
+        },
+        {
+          type: 'doc',
+          id: 'api/collection',
+          label: 'Retrieving a Single Collection'
+        },
+        {
+          type: 'doc',
+          id: 'api/asset_contract',
+          label: 'Retrieving a Single Contract'
+        },
+        {
+          type: 'doc',
+          id: 'api/assets_count',
+          label: 'Retrieving assets count of a Contract'
+        },
+        {
+          type: 'doc',
+          id: 'api/assets',
+          label: 'Retrieving assets of a Contract'
         }
       ]
     }
